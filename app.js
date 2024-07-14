@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         group: {
             name: 'criteria',
             pull: 'clone',
-            put: false
+            put: true // Allow items to be put back in the available list
         },
         animation: 150,
         sort: false
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 showError("This criterion has already been added.");
             } else if (selectedCriteria.children.length > 10) {
                 selectedCriteria.removeChild(addedItem);
-                showError("You can only select up to 10 criteria.");
+                showError("You can only select up to 10 criteria. You can replace a criteria by dragging the unwanted one back to the Available Criteria list and drag the new one across");
             } else {
                 hideError();
                 const criterionText = addedItem.textContent;
@@ -55,6 +55,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 updateScoringInputs();
             }
+        },
+        onRemove: function (evt) {
+            const removedItem = evt.item;
+            const criterionText = removedItem.textContent;
+            if (!Array.from(availableCriteria.children).some(item => item.textContent === criterionText)) {
+                const li = document.createElement('li');
+                li.textContent = criterionText;
+                availableCriteria.appendChild(li);
+            }
+            updateScoringInputs();
         },
         onSort: function () {
             updateScoringInputs();
