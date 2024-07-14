@@ -1,0 +1,218 @@
+/* Existing styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    margin-right: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar h1, .sidebar h3 {
+    color: #2458a9;
+}
+
+#scoreKey {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #a97524;
+    border-radius: 10px;
+}
+
+    #scoreKey h3 {
+        margin-top: 0;
+        color: #2458a9;
+    }
+
+    #scoreKey ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+    }
+
+        #scoreKey ul li {
+            margin-bottom: 5px;
+        }
+
+.main-content {
+    flex-grow: 1;
+    color: #000000;
+}
+
+.top-criteria-container, .product-management, .product-area {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #a97524;
+}
+
+    .top-criteria-container h1, .top-criteria-container h2, .product-area h2, .product-management h2 {
+        color: #2458a9;
+    }
+
+    .top-criteria-container p {
+        color: #000000;
+    }
+
+#availableCriteria, #selectedCriteria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border: 1px solid #a97524;
+    border-radius: 10px;
+    min-height: 150px;
+    color: #000000;
+}
+
+    #availableCriteria li, #selectedCriteria li {
+        padding: 8px;
+        border-bottom: 1px solid #a97524;
+        cursor: grab;
+    }
+
+        #availableCriteria li:hover, #selectedCriteria li:hover {
+            background-color: #a97524;
+        }
+
+input[type="text"], button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #a97524;
+}
+
+    input[type="text"]::placeholder {
+        color: #000000;
+    }
+
+button {
+    background-color: #2458a9;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #a97524;
+}
+
+    button:hover {
+        background-color: #1b3d82;
+    }
+
+#scoreTableArea {
+    width: 100%;
+}
+
+#scoreTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+    #scoreTable th, #scoreTable td {
+        border: 1px solid #a97524;
+        padding: 8px;
+        text-align: left;
+        color: #000000;
+    }
+
+.product-area h2, .product-area p {
+    margin: 10px 0;
+    color: #2458a9;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product {
+    width: 560px;
+    border: 1px solid #a97524;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+}
+
+    .product h2 {
+        color: #2458a9;
+    }
+
+.score-inputs div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.score-inputs label {
+    width: 200px; /* Set a fixed width for the labels */
+    margin-right: 10px;
+}
+
+.score-inputs input[type="range"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.score-inputs span {
+    width: 30px; /* Set a fixed width for the score value */
+    text-align: center;
+    color: #000000;
+}
+
+/* New styles for sortable elements */
+.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: #a97524 !important;
+    opacity: 1 !important;
+    border: 1px solid #a97524 !important;
+}
+
+.ui-sortable-helper {
+    background: #a97524 !important;
+    border: 1px solid #a97524 !important;
+    color: #ffffff !important;
+}

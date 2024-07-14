@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHS EMR Selection Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="https://bewajihealth.com/wp-content/uploads/2023/07/Bewaji-Healthcare-Solutions-Logo-2.png" alt="Bewaji Healthcare Solutions Logo" class="logo">
+            </div>
+            <h1>Available Criteria</h1>
+            <ul id="availableCriteria" class="criteria-list"></ul>
+            <div id="scoreKey">
+                <h3>Score Key</h3>
+                <ul>
+                    <li>0 - Feature not available</li>
+                    <li>1 - Meets criteria</li>
+                    <li>2 - Exceeds expectations</li>
+                    <li>3 - Innovative/best in class/superior</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>BHS EMR Selection Tool</h1>
+            </div>
+            <div class="top-criteria-container">
+                <h2>Top 10 Criteria (Drag here)</h2>
+                <p>After you've added 10 criteria you can drag and drop to rank them in order of importance. Remember you can only add 10.</p>
+                <ul id="selectedCriteria" class="criteria-list"></ul>
+                <div id="error-message" class="error-message"></div>
+                <h2>Total Scores</h2>
+                <div id="scoreTableArea">
+                    <table id="scoreTable">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Scores will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="product-management">
+                <input type="text" id="newProductName" placeholder="Enter product name" />
+                <button id="addProductBtn">Add New Product</button>
+            </div>
+            <div class="product-area">
+                <h2>Your Solution Options</h2>
+                <p>Scroll down to see all the solutions you have added.New ranking will not be reflected if you adjust ranking after adding products</p>
+                <div id="products" class="product-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
